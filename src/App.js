@@ -5,27 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./store";
 import { Provider } from "react-redux";
 
-function App() {
+import Search from './Search';
+
+
+const App = () => {
+
+
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <div className="App">
-          <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-              </header>
-          </div>
-      </BrowserRouter>
+        <Search/>
     </Provider>
   );
 }
