@@ -6,10 +6,10 @@ const INITIAL_STATE = {
   searchResults: []
 }
 
-export const search = (searchText) => {
+export const search = () => {
   return async (dispatch, getState) => {
     try {
-      const searchResultsRes = await fetch(`https://ac.cnstrc.com/search/${encodeURIComponent(searchText)}?key=key_fygjntHGW7usvxC8`, {
+      const searchResultsRes = await fetch("https://ac.cnstrc.com/search/apple?key=key_fygjntHGW7usvxC8", {
         method: "GET"
       });
       const searchResults = await searchResultsRes.json();
